@@ -62,7 +62,7 @@
 			<plugin>
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.20.0</version>
+				<version>0.39.0</version>
 
 				<configuration>
 
@@ -74,7 +74,7 @@
 						<image>
 							<name>${docker.image.prefix}/${docker.image.name}</name>
 							<build>
-								<dockerFileDir>${project.basedir}/src/main/docker/</dockerFileDir>
+								<contextDir>${project.basedir}/src/main/docker/</contextDir>
 
                                 <!--copies artficact to docker build dir in target-->
 								<assembly>
