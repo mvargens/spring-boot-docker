@@ -1,6 +1,8 @@
-FROM openjdk
+FROM alpine
 
 VOLUME /tmp
 ADD maven/${fileName}.jar ${fileName}.jar
+RUN apk upgrade
+RUN apk add --no-cache openjdk8
 RUN sh -c 'touch /${fileName}.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/${fileName}.jar"]
