@@ -20,7 +20,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.17</java.version>
+		<java.version>17</java.version>
 
 		<!--set this to your docker acct name-->
 		<docker.image.prefix>springframeworkguru</docker.image.prefix>
@@ -161,6 +161,7 @@
                                 <env>
                                     <!-- SPRING_DATASOURCE_URL>jdbc:mysql://mysqldb:3306/pageviewservice</SPRING_DATASOURCE_URL -->
                                     <SPRING_DATASOURCE_URL>jdbc:mysql://mysqldb:3306/pageviewservice?https.protocols=TLSv1.2</SPRING_DATASOURCE_URL>
+                                    <SPRING_CONNECTION.DRIVER_CLASS>com.mysql.cj.jdbc.Driver</SPRING_CONNECTION.DRIVER_CLASS>
                                     <SPRING_PROFILES_ACTIVE>mysql</SPRING_PROFILES_ACTIVE>
                                     <SPRING_RABBITMQ_HOST>rabbitmq</SPRING_RABBITMQ_HOST>
                                 </env>
